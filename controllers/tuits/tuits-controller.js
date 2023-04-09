@@ -5,6 +5,14 @@ const createTuit = async (req, res) => {
      newTuit.likes = 0;
      newTuit.dislikes = 0;
      newTuit.liked = false;
+     newTuit.topic= "Generic";
+      newTuit.userName= "LoggedIn User";
+      newTuit.handle= "@iamloggedin";
+       newTuit.time= "0h";
+       newTuit.title= "Latest Tuit";
+       newTuit.replies= 0;
+       newTuit.retuits= 0;
+       newTuit.image="default.jpg";
      const insertedTuit = await tuitsDao.createTuit(newTuit);
      res.json(insertedTuit);
 }
